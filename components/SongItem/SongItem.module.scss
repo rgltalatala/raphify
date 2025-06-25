@@ -16,8 +16,8 @@
 
   .playButton {
     position: absolute;
-    bottom: 6rem;
-    right: 1.25rem;
+    bottom: 6.5rem;
+    right: 1.5rem;
     transition-property: all;
     transition-duration: 150ms;
     transition-timing-function: ease-in-out;
@@ -34,12 +34,6 @@
       transform: translateY(0) scale(1.1);
       opacity: 1;
     }
-  }
-
-  .playButton {
-    position: absolute;
-    bottom: 6rem;
-    right: 1.25rem;
   }
 
   .songImageWrapper {

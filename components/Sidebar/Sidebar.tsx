@@ -4,6 +4,8 @@ import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
+import { Song } from "@/types";
+
 import styles from "./Sidebar.module.scss";
 import Box from "../Box/Box";
 import SidebarItem from "./SidebarItem/SidebarItem";
@@ -11,10 +13,11 @@ import Library from '../Library/Library';
 
 interface SidebarProps {
     children: React.ReactNode;
+    songs: Song[];
 }
 
 const Sidebar: React.FC<SidebarProps> = (props) => {
-    const { children } = props;
+    const { children, songs } = props;
 
     const pathname = usePathname();
 
@@ -42,7 +45,7 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
                     ))}
                 </Box>
                 <Box className={styles.songLibrary}>
-                    <Library></Library>
+                    <Library songs={songs}></Library>
                 </Box>
             </div>
             <main className={styles.main}>

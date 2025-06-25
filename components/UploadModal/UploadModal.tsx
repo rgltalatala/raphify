@@ -162,7 +162,7 @@ const UploadModal = () => {
                         accept="image/*"
                     />
                 </div>
-                <Button disabled={isLoading} type="submit">
+                <Button className={styles.uploadButton} disabled={isLoading} type="submit">
                     Create
                 </Button>
             </form>
