@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = (props) => {
     
 
     return (
-        <div className={`${styles.headerWrapper} ${className}}`}>
+        <div className={`${styles.headerWrapper} ${className}`}>
             <div className={styles.header}>
                 <div className={styles.navigationButtonContainer}>
                     <button className={styles.navigationButton} onClick={() => router.back()}>

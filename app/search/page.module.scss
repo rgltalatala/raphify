@@ -1,0 +1,28 @@
+@use '../styles/variables' as var;
+
+.searchPage {
+    background-color: var.$gray;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: hidden;
+    
+    .searchPageHeader {
+        background-image: linear-gradient(to bottom, var.$gray, var.$gray);
+    }
+
+    .searchSection {
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+        column-gap: 24px;
+
+        .searchPageTitle {
+            color: var.$white;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
+}
