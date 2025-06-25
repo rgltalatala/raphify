@@ -1,0 +1,21 @@
+.libraryHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.libraryIcon {
+    margin-right: 5px;
+}
+
+.libraryHeader {
+    display: inline-flex;
+    margin: 10px;
+}
+
+.plusIcon {
+    margin: 10px;
+    &:hover {
+        opacity: 75%;
+        cursor: pointer;
+    }
+}

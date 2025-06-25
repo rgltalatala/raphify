@@ -1,0 +1,6 @@
+@use '../../app/styles/variables' as var;
+
+.box {
+    background-color: var.$gray;
+    border-radius: 5px;
+}

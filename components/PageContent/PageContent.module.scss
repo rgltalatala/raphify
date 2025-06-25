@@ -1,0 +1,17 @@
+.emptySongsList {
+    margin-top: 1rem;         /* mt-4 = 16px */
+    color: #a3a3a3;           /* text-neutral-400 */
+}
+
+.songsList {
+    display: grid;                  /* grid */
+    grid-template-columns: repeat(2, 1fr);   /* grid-cols-2 */
+    gap: 1rem;                      /* gap-4 = 16px */
+    margin-top: 1rem;              /* mt-4 = 16px */
+}
+
+@media (min-width: 640px) {
+    .songsList {
+      grid-template-columns: repeat(3, 1fr);  /* sm:grid-cols-3 */
+    }
+  }

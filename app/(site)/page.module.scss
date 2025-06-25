@@ -1,0 +1,66 @@
+@use '../styles/variables' as var;
+
+.main {
+    background-color: var.$gray;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+
+    .headerText {
+        color: var.$white;
+        font-weight: 700;
+    }
+
+    .listContainer {
+        display: grid;
+        margin-top: 1rem; 
+        grid-template-columns: repeat(1, minmax(0, 1fr)); 
+        gap: 0.75rem; 
+    }
+
+    .songSection {
+        margin-top: 0.5rem;   /* mt-2 = 8px */
+        margin-bottom: 1.75rem; /* mb-7 = 28px */
+        padding-left: 1.5rem;  /* px-6 = 24px */
+        padding-right: 1.5rem;
+    }
+
+    .songContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .songSectionTitle {
+        color: #ffffff;
+        font-size: 1.5rem;       /* 2xl = 24px */
+        line-height: 2rem;       /* Tailwind line height for 2xl */
+        font-weight: 600;        /* semibold */
+    }
+}
+
+@media (min-width: 640px) { 
+    .main {
+        .listContainer {
+            grid-template-columns: repeat(2, minmax(0, 1fr)); 
+        }
+    }
+}
+
+@media (min-width: 1280px) { 
+    .main {
+        .listContainer {
+            grid-template-columns: repeat(3, minmax(0, 1fr)); 
+        }
+    }
+}
+@media (min-width: 1536px) { 
+    .main {
+        .listContainer {
+            grid-template-columns: repeat(4, minmax(0, 1fr)); 
+        }
+    }
+}

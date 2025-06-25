@@ -1,0 +1,31 @@
+.input {
+    display: flex;                       /* flex */
+  width: 100%;                         /* w-full */
+  border-radius: 0.375rem;             /* rounded-md */
+  background-color: #404040;           /* bg-neutral-700 */
+  border: 1px solid transparent;       /* border border-transparent */
+  padding: 0.75rem 0.75rem;            /* px-3 py-3 */
+  font-size: 0.875rem;                 /* text-sm */
+  color: white;                        /* default text color (assumed) */
+  outline: none;                       /* focus:outline-none */
+
+  &:placeholder {
+    color: #a3a3a3; 
+  }
+
+  &:disabled {
+    cursor: not-allowed;                 /* disabled:cursor-not-allowed */
+    opacity: 0.5;      
+  }
+
+  &:disabled.opacity-75 {
+    opacity: 0.75;
+  }
+}
+
+.input[type="file"] {
+    border: 0;                           /* file:border-0 */
+    background-color: transparent;       /* file:bg-transparent */
+    font-size: 0.875rem;                 /* file:text-sm */
+    font-weight: 500;                    /* file:font-medium */
+  }

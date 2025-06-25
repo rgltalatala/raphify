@@ -1,0 +1,9 @@
+.uploadForm {
+    display: flex;            /* flex */
+    flex-direction: column;   /* flex-col */
+    row-gap: 1rem;            /* gap-y-4 = 1rem (16px) */
+}
+
+.fileSelect {
+    padding-bottom: 0.25rem;
+}
