@@ -1,0 +1,28 @@
+@use "../../styles/variables" as var;
+
+.likedContentEmptyState {
+  display: flex;
+  flex-direction: column;
+  column-gap: 8px;
+  width: 100%;
+  padding: 0px 24px;
+  color: var.$neutral-gray;
+}
+
+.likedContentPage {
+  display: flex;
+  flex-direction: column;
+  column-gap: 8px;
+  width: 100%;
+
+  .likedSongWrapper {
+    display: flex;
+    align-items: center;
+    row-gap: 24px;
+    width: 100%;
+
+    .likedSong {
+      flex: 1 1 0%;
+    }
+  }
+}

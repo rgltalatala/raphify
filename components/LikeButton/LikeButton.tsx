@@ -23,7 +23,7 @@ const LikeButton: React.FC<LikeButtonProps> = (props) => {
   const authModal = useAuthModal();
   const { user } = useUser();
 
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState<boolean>(false);
 
   useEffect(() => {
     if (!user?.id) {
@@ -41,8 +41,9 @@ const LikeButton: React.FC<LikeButtonProps> = (props) => {
       if (!error && data) {
         setIsLiked(true);
       }
-      fetchData();
     };
+    
+    fetchData();
   }, [songId, supabaseClient, user?.id]);
 
   const Icon = isLiked ? AiFillHeart : AiOutlineHeart;

@@ -1,5 +1,6 @@
 import getLikedSongs from "@/actions/getLikedSongs";
 
+import LikedContent from "./components/LikedContent";
 import Header from "@/components/Header/Header";
 import Image from "next/image";
 
@@ -19,7 +20,7 @@ const Liked = async () => {
               <Image
                 fill
                 className={styles.likedSongsImage}
-                src="/images/liked.png"
+                src="/images/liked.jpg"
                 alt="Playlist"
               />
             </div>
@@ -30,6 +31,7 @@ const Liked = async () => {
           </div>
         </div>
       </Header>
+      <LikedContent songs={songs}/>
     </div>
   );
 };

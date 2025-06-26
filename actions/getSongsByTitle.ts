@@ -11,17 +11,7 @@ const getSongsByTitle = async (title: string): Promise<Song[]> => {
     if (!title) {
         const allSongs = await getSongs();
 
-        return allSongs
-    }
-
-    const { 
-        data: sessionData, 
-        error: sessionError 
-    } = await supabase.auth.getSession();
-
-    if (sessionError) {
-        console.log(sessionError.message);
-        return [];
+        return allSongs;
     }
 
     const { data, error } = await supabase
