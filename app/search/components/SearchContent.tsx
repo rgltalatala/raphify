@@ -4,6 +4,7 @@ import { Song } from "@/types";
 
 import styles from "./SearchContent.module.scss";
 import MediaItem from "@/components/MediaItem/MediaItem";
+import LikeButton from "@/components/LikeButton/LikeButton";
 
 interface SearchContentProps {
   songs: Song[];
@@ -25,7 +26,7 @@ const SearchContent: React.FC<SearchContentProps> = (props) => {
             <div className={styles.song}>
                 <MediaItem onClick={() => {}} data={song}/>
             </div>
-            {/* todo: add like button */}
+            <LikeButton songId={song.id}/>
         </div>
       ))}
     </div>
