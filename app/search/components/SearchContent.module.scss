@@ -1,0 +1,31 @@
+@use '../../styles/variables' as var;
+
+.searchContentEmptyState {
+    display: flex;
+    flex-direction: column;
+    column-gap: 8px;
+    width: 100%;
+    padding: 0px 24px;
+    color: var.$neutral-gray;
+}
+
+.searchContentWrapper {
+    display: flex;
+    flex-direction: column;
+    column-gap: 8px;
+    width: 100%;
+    padding: 0px 24px;
+}
+
+.songWrapper {
+    display: flex;
+    align-items: center;
+    row-gap: 16px;
+    width: 100%;
+
+    .song {
+        flex-grow: 1; 
+        flex-shrink: 1; 
+        flex-basis: 0%
+    }
+}

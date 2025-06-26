@@ -2,6 +2,7 @@ import getSongsByTitle from "@/actions/getSongsByTitle";
 
 import Header from "@/components/Header/Header";
 import SearchInput from "@/components/SearchInput/SearchInput";
+import SearchContent from "./components/SearchContent";
 
 import styles from './page.module.scss';
 
@@ -26,6 +27,7 @@ const Search = async (props: SearchProps) => {
                     <SearchInput></SearchInput>
                 </div>
             </Header>
+            <SearchContent songs={songs}/>
         </div>
     )
 }
