@@ -21,7 +21,6 @@ export default async function Home() {
             name="Liked Songs"
             href="liked"
           />
-
         </div>
       </div>
     </Header>

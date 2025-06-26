@@ -1,0 +1,80 @@
+@use "../styles/variables" as var;
+
+.likedSongsPage {
+  background-color: var.$gray;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+
+  .likedSongsPageHeaderWrapper {
+    margin-top: 80px;
+
+    .likedSongsHeaderContainer {
+      display: flex; /* flex */
+      flex-direction: column; /* flex-col */
+      column-gap: 1.25rem; /* gap-x-5 = 20px */
+
+      .likedSongsHeaderImage {
+        position: relative; /* relative */
+        width: 8rem; /* w-32 = 128px */
+        height: 8rem; /* h-32 = 128px */
+
+        .likedSongsImage {
+          object-fit: cover;
+        }
+      }
+
+      .likedHeaderTextContainer {
+        display: flex; /* flex */
+        flex-direction: column; /* flex-col */
+        row-gap: 0.5rem; /* gap-y-2 = 8px */
+        margin-top: 1rem;
+
+        .likedPlaylist {
+          display: none; /* hidden */
+          font-weight: 600; /* font-semibold */
+          font-size: 0.875rem; /* text-sm = 14px */
+          line-height: 1.25rem;
+        }
+
+        .likedSongsText {
+          color: white; /* text-white */
+          font-weight: 700; /* font-bold */
+          font-size: 2.25rem; /* text-4xl = 36px */
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+    .likedSongsText {
+      font-size: 3rem;              /* sm:text-5xl = 48px */
+      line-height: 1;               /* Tailwind usually sets 1 for 5xl */
+    }
+  }
+
+@media (min-width: 768px) {
+  .likedSongsHeaderContainer {
+    flex-direction: row; /* md:flex-row */
+  }
+
+  .likedPlaylist {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .likedSongsHeaderImage {
+    width: 11rem; /* lg:w-44 = 176px */
+    height: 11rem; /* lg:h-44 = 176px */
+  }
+
+  .likedSongsText {
+    font-size: 4.5rem;            /* lg:text-7xl = 72px */
+    line-height: 1;               /* Tailwind default for 7xl */
+  }
+}
